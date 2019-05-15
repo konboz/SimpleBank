@@ -55,11 +55,13 @@ namespace SimpleBank
 
         public void LoadJson()
         {
-            List<Transaction> newTransactions = transactions;
             string data = File.ReadAllText(filename);
-            newTransactions = JsonConvert.
-                DeserializeObject<List<Transaction>>(data);
-         //lathos, giati?
+            var tempTransactions = JsonConvert.DeserializeObject<List<Transaction>>(data);
+            foreach (Transaction t in tempTransactions)
+            {
+               
+                transactions.Add(t);
+}
         }
     }
 }
