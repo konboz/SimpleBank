@@ -59,9 +59,9 @@ namespace SimpleBank
             var tempTransactions = JsonConvert.DeserializeObject<List<Transaction>>(data);
             foreach (Transaction t in tempTransactions)
             {
-               
+
                 transactions.Add(t);
-}
+            }
         }
     }
 }
